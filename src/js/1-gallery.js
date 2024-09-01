@@ -1,8 +1,8 @@
 const images = [
 	
 	{
-		preview: 'goit-js-hw-09/img/1.jpg',
-		original: 'goit-js-hw-09/img/1.jpg',
+		preview: '/goit-js-hw-09/img/1.jpg',
+		original: '/goit-js-hw-09/img/1.jpg',
 		description: 'Image 1 description',
 	},
 
