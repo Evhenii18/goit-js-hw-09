@@ -41,7 +41,7 @@ main:has(.back-link) {
 	text-align: center;
 }
 
-.container {
+main {
 	padding-top: 40px;
 	padding-bottom: 40px;
 	width: 1128px;
