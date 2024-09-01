@@ -1,49 +1,49 @@
 const images = [
 	
 	{
-		preview: 'img/1.jpg',
-		original: 'img/1.jpg',
+		preview: '/img/1.jpg',
+		original: '/img/1.jpg',
 		description: 'Image 1 description',
 	},
 
 	{
-		preview: 'img/2.jpg',
-		original: 'img/2.jpg',
+		preview: '/img/2.jpg',
+		original: '/img/2.jpg',
 		description: 'Image 2 description',
 	},
 	{
-		preview: 'img/3.jpg',
-		original: 'img/3.jpg',
+		preview: '/img/3.jpg',
+		original: '/img/3.jpg',
 		description: 'Image 3 description',
 	},
 	{
-		preview: 'img/4.jpg',
-		original: 'img/4.jpg',
+		preview: '/img/4.jpg',
+		original: '/img/4.jpg',
 		description: 'Image 4 description',
 	},
 	{
-		preview: 'img/5.jpg',
-		original: 'img/5.jpg',
+		preview: '/img/5.jpg',
+		original: '/img/5.jpg',
 		description: 'Image 5 description',
 	},
 	{
-		preview: 'img/6.jpg',
-		original: 'img/6.jpg',
+		preview: '/img/6.jpg',
+		original: '/img/6.jpg',
 		description: 'Image 6 description',
 	},
 	{
-		preview: 'img/7.jpg',
-		original: 'img/7.jpg',
+		preview: '/img/7.jpg',
+		original: '/img/7.jpg',
 		description: 'Image 7 description',
 	},
 	{
-		preview: 'img/8.jpg',
-		original: 'img/8.jpg',
+		preview: '/img/8.jpg',
+		original: '/img/8.jpg',
 		description: 'Image 8 description',
 	},
 	{
-		preview: 'img/9.jpg',
-		original: 'img/9.jpg',
+		preview: '/img/9.jpg',
+		original: '/img/9.jpg',
 		description: 'Image 9 description',
 	},
 	
