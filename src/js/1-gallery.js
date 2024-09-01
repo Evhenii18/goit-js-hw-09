@@ -1,19 +1,19 @@
 const images = [
 	
 	{
-		preview: new URL('../img/1.jpg', import.meta.url).href,
-		original: new URL('../img/1.jpg', import.meta.url).href,
+		preview: new URL('/img/1.jpg', import.meta.url).href,
+		original: new URL('/img/1.jpg', import.meta.url).href,
 		description: 'Image 1 description',
 	},
 
 	{
-		preview: new URL('../img/2.jpg', import.meta.url).href,
-		original: new URL('../img/2.jpg', import.meta.url).href,
+		preview: new URL('/img/2.jpg', import.meta.url).href,
+		original: new URL('/img/2.jpg', import.meta.url).href,
 		description: 'Image 2 description',
 	},
 	{
-		preview: new URL('../img/3.jpg', import.meta.url).href,
-		original: new URL('../img/3.jpg', import.meta.url).href,
+		preview: new URL('/img/3.jpg', import.meta.url).href,
+		original: new URL('/img/3.jpg', import.meta.url).href,
 		description: 'Image 3 description',
 	},
 	{
@@ -52,24 +52,18 @@ const images = [
 import SimpleLightbox from 'simplelightbox';
 
 
+
 const galleryContainer = document.querySelector('.gallery');
 
-const galleryMarkup = images.map(({ preview, original, description }) => {
-	return `
-    <li class="gallery-item">
-        <a class="gallery-link" href="${original}">
-            <img 
-                class="gallery-image" 
-                src="${preview}" 
-                alt="${description}" 
-            />
-        </a>
-    </li>
-    `;
-}).join('');
+const galleryMarkup = images.map(({ preview, original, description }) => `
+  <li class="gallery-item">
+    <a class="gallery-link" href="${original}">
+      <img class="gallery-image" src="${preview}" alt="${description}" />
+    </a>
+  </li>
+`).join('');
 
 galleryContainer.innerHTML = galleryMarkup;
-
 
 const lightbox = new SimpleLightbox('.gallery a', {
 	captions: true,
@@ -77,10 +71,8 @@ const lightbox = new SimpleLightbox('.gallery a', {
 	captionPosition: 'bottom',
 	captionDelay: 250,
 	disableScroll: true,
-	overlayOpacity: 0.8,
+	overlayOpacity: 0.8, // прозрачность
 });
-
-
 
 
 

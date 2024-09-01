@@ -1,13 +1,26 @@
-async function loadHTML(url, container) {
-	const response = await fetch(url);
-	const text = await response.text();
-	container.innerHTML = text;
+async function loadHTML(url, containerId) {
+	try {
+		const response = await fetch(url);
+		if (!response.ok) {
+			throw new Error(`Failed to fetch ${url}: ${response.statusText}`);
+		}
+		const text = await response.text();
+		document.getElementById(containerId).innerHTML = text;
+	} catch (error) {
+		console.error('Error loading HTML:', error);
+	}
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-	const galleryContainer = document.querySelector('.gallery');
-	const formContainer = document.querySelector('.form-container');
+	loadHTML('/goit-js-hw-09/1-gallery.html', 'gallery-container')
+		.then(() => {
 
-	
-	loadHTML('/goit-js-hw-09/2-form.html', formContainer);
+			import('/js/1-gallery.js');
+		});
+
+	loadHTML('/goit-js-hw-09/2-form.html', 'form-container')
+		.then(() => {
+
+			import('/js/2-form.js');
+		});
 });
