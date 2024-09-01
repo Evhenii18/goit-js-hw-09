@@ -42,7 +42,7 @@ const images = [
 		description: 'Image 8 description',
 	},
 	{
-		preview: '/img/9.jpg',
+		preview: '',
 		original: '/img/9.jpg',
 		description: 'Image 9 description',
 	},
