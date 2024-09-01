@@ -1,8 +1,8 @@
 const images = [
 	
 	{
-		preview: '/img/1.jpg',
-		original: '/img/1.jpg',
+		preview: '../img/1.jpg',
+		original: '../img/1.jpg',
 		description: 'Image 1 description',
 	},
 
