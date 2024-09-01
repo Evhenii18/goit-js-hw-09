@@ -1,49 +1,49 @@
 const images = [
 	
 	{
-		preview: '/goit-js-hw-09/img/1.jpg',
-		original: '/goit-js-hw-09/img/1.jpg',
+		preview: new URL('../img/1.jpg', import.meta.url).href,
+		original: new URL('../img/1.jpg', import.meta.url).href,
 		description: 'Image 1 description',
 	},
 
 	{
-		preview: 'img/2.jpg',
-		original: 'img/2.jpg',
+		preview: new URL('../img/1.jpg', import.meta.url).href,
+		original: new URL('../img/1.jpg', import.meta.url).href,
 		description: 'Image 2 description',
 	},
 	{
-		preview: 'img/3.jpg',
-		original: 'img/3.jpg',
+		preview: new URL('../img/1.jpg', import.meta.url).href,
+		original: new URL('../img/1.jpg', import.meta.url).href,
 		description: 'Image 3 description',
 	},
 	{
-		preview: 'img/4.jpg',
-		original: 'img/4.jpg',
+		preview: new URL('../img/1.jpg', import.meta.url).href,
+		original: new URL('../img/1.jpg', import.meta.url).href,
 		description: 'Image 4 description',
 	},
 	{
-		preview: 'img/5.jpg',
-		original: 'img/5.jpg',
+		preview: new URL('../img/1.jpg', import.meta.url).href,
+		original: new URL('../img/1.jpg', import.meta.url).href,
 		description: 'Image 5 description',
 	},
 	{
-		preview: 'img/6.jpg',
-		original: 'img/6.jpg',
+		preview: new URL('../img/1.jpg', import.meta.url).href,
+		original: new URL('../img/1.jpg', import.meta.url).href,
 		description: 'Image 6 description',
 	},
 	{
-		preview: 'img/7.jpg',
-		original: 'img/7.jpg',
+		preview: new URL('../img/1.jpg', import.meta.url).href,
+		original: new URL('../img/1.jpg', import.meta.url).href,
 		description: 'Image 7 description',
 	},
 	{
-		preview: 'img/8.jpg',
-		original: 'img/8.jpg',
+		preview: new URL('../img/1.jpg', import.meta.url).href,
+		original: new URL('../img/1.jpg', import.meta.url).href,
 		description: 'Image 8 description',
 	},
 	{
-		preview: 'img/9.jpg',
-		original: 'img/9.jpg',
+		preview: new URL('../img/1.jpg', import.meta.url).href,
+		original: new URL('../img/1.jpg', import.meta.url).href,
 		description: 'Image 9 description',
 	},
 	
