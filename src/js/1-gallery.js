@@ -49,8 +49,8 @@ const images = [
 	
 ];
 
-import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
+import SimpleLightbox from 'simplelightbox';
+
 
 const galleryContainer = document.querySelector('.gallery');
 
@@ -76,7 +76,11 @@ const lightbox = new SimpleLightbox('.gallery a', {
 	captionsData: 'alt',
 	captionPosition: 'bottom',
 	captionDelay: 250,
+	disableScroll: true,
+	overlayOpacity: 0.8,
 });
+
+
 
 
 

@@ -16,7 +16,9 @@
 @import "simplelightbox/dist/simple-lightbox.min.css";
 
 
-
+.sl-overlay {
+  background: #2E2F42CC;
+}
 
 
 
