@@ -36,11 +36,7 @@ const images = [
 		original: new URL('../img/1.jpg', import.meta.url).href,
 		description: 'Image 7 description',
 	},
-	{
-		preview: new URL('../img/1.jpg', import.meta.url).href,
-		original: new URL('../img/1.jpg', import.meta.url).href,
-		description: 'Image 8 description',
-	},
+	
 	{
 		preview: new URL('../img/1.jpg', import.meta.url).href,
 		original: new URL('../img/1.jpg', import.meta.url).href,
