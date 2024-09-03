@@ -1,3 +1,7 @@
+import './js/1-gallery.js';
+import './js/2-form.js';
+
+
 async function loadHTML(url, containerId) {
 	try {
 		const response = await fetch(url);
