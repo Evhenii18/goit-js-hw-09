@@ -71,7 +71,7 @@ const lightbox = new SimpleLightbox('.gallery a', {
 	captionPosition: 'bottom',
 	captionDelay: 250,
 	disableScroll: true,
-	overlayOpacity: 0.8, // прозрачность
+	overlayOpacity: 0.8, 
 });
 
 
