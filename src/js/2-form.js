@@ -1,54 +1,57 @@
-const STORAGE_KEY = 'feedback-form-state';
-
-
-let formData = {
+const formData = {
 	email: '',
 	message: ''
 };
 
-
 const form = document.querySelector('.feedback-form');
+const emailInput = form.querySelector('input[name="email"]');
+const messageInput = form.querySelector('textarea[name="message"]');
 
+const STORAGE_KEY = 'feedback-form-state';
 
-if (form) {
-
-	loadFormData();
-
-
-	form.addEventListener('input', onFormInput);
-	form.addEventListener('submit', onFormSubmit);
-}
-
-
-function onFormInput(event) {
-	formData[event.target.name] = event.target.value.trim();
+function saveToLocalStorage() {
 	localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
 }
 
-function onFormSubmit(event) {
-	event.preventDefault();
+form.addEventListener('input', (event) => {
+	formData[event.target.name] = event.target.value.trim(); 
+	saveToLocalStorage();
+});
 
-	const { email, message } = formData;
-
-	if (email === '' || message === '') {
-		alert('Fill please all fields');
-		return;
-	}
-
-	console.log(formData);
-
-	localStorage.removeItem(STORAGE_KEY);
-	formData = { email: '', message: '' };
-	form.reset();
-}
-
-
-function loadFormData() {
+function populateFormFields() {
 	const savedData = localStorage.getItem(STORAGE_KEY);
 
 	if (savedData) {
-		formData = JSON.parse(savedData);
-		form.elements.email.value = formData.email;
-		form.elements.message.value = formData.message;
+		const parsedData = JSON.parse(savedData);
+
+		if (parsedData.email) {
+			emailInput.value = parsedData.email;
+			formData.email = parsedData.email; 
+		}
+		if (parsedData.message) {
+			messageInput.value = parsedData.message;
+			formData.message = parsedData.message; 
+		}
 	}
 }
+
+// Викликаємо функцію для заповнення полів форми при завантаженні сторінки
+document.addEventListener('DOMContentLoaded', populateFormFields);
+
+// Обробка події submit форми
+form.addEventListener('submit', (event) => {
+	event.preventDefault(); // Запобігаємо стандартному відправленню форми
+
+	// Перевіряємо, чи обидва поля заповнені
+	if (formData.email === '' || formData.message === '') {
+		alert('Fill please all fields');
+	} else {
+		console.log('Form data:', formData);
+
+		// Очищення даних після успішного відправлення форми
+		localStorage.removeItem(STORAGE_KEY);
+		formData.email = '';
+		formData.message = '';
+		form.reset(); // Очищення полів форми
+	}
+});
